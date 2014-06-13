@@ -1,0 +1,16 @@
+{
+    "contents" : "\\documentclass[oneside]{article}\n\n\\usepackage[margin=2cm,nohead]{geometry}\n\\usepackage[pdftex]{graphicx}\n\\usepackage{subfig}\n\\usepackage{float}\n\\usepackage{verbatim}\n\n\\usepackage{hyperref}\n\\hypersetup{\n  colorlinks=true,\n  pdfauthor={http://wollersheim.id.au}\n  }\n\n\\graphicspath{{./graphs/}}\n\n\\title{Report for <%= title %>}\n\\date{\\today}\n\\raggedbottom\n\\setcounter{tocdepth}{1}\n\n\\begin{document}\n\n\\maketitle\n\n\n<%= introduction %>\n\n\\begin{table}[h]\n  \\centering\n    <%= apply(reportList, subfloat_tbl) %>\n  \\caption{Marks}\n\\end{table}\n\n\\end{document}\n",
+    "created" : 1402630502101.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2598634001",
+    "id" : "FA0EAABD",
+    "lastKnownWriteTime" : 1402615106,
+    "path" : "/mnt/sda6/code/R/misc/marks/report.brew",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "text"
+}

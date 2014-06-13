@@ -1,0 +1,35 @@
+\documentclass[oneside]{article}
+
+\usepackage[margin=2cm,nohead]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{verbatim}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  pdfauthor={http://wollersheim.id.au}
+  }
+
+\graphicspath{{./graphs/}}
+
+\title{Report for <%= title %>}
+\date{\today}
+\raggedbottom
+\setcounter{tocdepth}{1}
+
+\begin{document}
+
+\maketitle
+
+
+<%= introduction %>
+
+\begin{table}[h]
+  \centering
+    <%= apply(reportList, subfloat_tbl) %>
+  \caption{Marks}
+\end{table}
+
+\end{document}

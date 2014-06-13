@@ -1,0 +1,16 @@
+{
+    "contents" : "library(brew)\nlibrary(ggplot2)\nmdata=read.csv(\"~/mydoc/teaching/hif/students/sql/submissions_marks.csv\")\ngdata=read.csv(\"~/mydoc/teaching/hif/students/sql/submissions_groups.csv\")\n\ngroups=levels(gdata$Group)\n # for each group\n# make up a Marks page for each group\n\nmkpdf = function(group) {\n    \n    \n    #report.brew expects: reportList, title, introduction\n    reportList=list()\n    reportList[[1]] = mdata[mdata$Group==group,]\n    title=group\n    introduction=\"hello\"\n    texFile = paste(group, \".tex\", sep=\"\")\n    brew(\"report.brew\", texFile)\n    texi2dvi(texFile, pdf = TRUE)\n}\n",
+    "created" : 1402630487430.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "478516617",
+    "id" : "3A2DB759",
+    "lastKnownWriteTime" : 1402630270,
+    "path" : "/mnt/sda6/code/R/misc/marks/groups2reports.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

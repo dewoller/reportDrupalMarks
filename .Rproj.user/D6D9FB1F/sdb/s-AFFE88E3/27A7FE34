@@ -1,0 +1,16 @@
+{
+    "contents" : " include_graph <- function(width = 1, filename) {\n     paste(\"\\includegraphics[width=\", width, \"\\linewidth]{\",\n         filename, \"}\", sep = \"\")\n }\n\n include_tbl <- function(width = 1, filename) {\n     print(xtable(filename), table.placement = \"\",\n         latex.environments = \"\", include.rownames = FALSE,\n         floating = FALSE)\n }\n\n subfloat_graph <- function(width, dataframe, caption = \"\") {\n     paste(\"\\subfloat[\", caption, \"]{\", \"\\begin{minipage}[h]{\",\n         width, \"\\linewidth}\\centering\", include_graph(width = 1,\n             dataframe), \"\\end{minipage}}\", sep = \"\")\n }\n\n subfloat_tbl <- function(width, dataframe, caption) {\n     paste(\"\\subfloat[\", caption, \"]{\", \"\\begin{minipage}[h]{\",\n         width, \"\\linewidth}\\centering\", print(xtable(dataframe),\n             file = stderr(), table.placement = \"\",\n             latex.environments = \"\", include.rownames = FALSE,\n             floating = FALSE), \"\\end{minipage}}\",\n         sep = \"\")\n }\n",
+    "created" : 1402630483070.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3574851923",
+    "id" : "27A7FE34",
+    "lastKnownWriteTime" : 1402615615,
+    "path" : "/mnt/sda6/code/R/misc/marks/functions.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
